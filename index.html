@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encriptador</title>
+    <link rel="icon" href="images/candado.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img id="logo-alura" src="images/Logo.png">
+    </header>
+
+    <main>
+        <section class="area-uno">
+            <textarea name="texto-encriptar" id="texto-encriptar" placeholder="Ingrese el texto a encriptar..."
+                oninput="validarTexto(this)"></textarea>
+            <p id="texto-advertir"><img id="sign" src="images/warning.png"> Ingrese un mensaje</p>
+            <p><img id="sign" src="images/bi_exclamation-circle-fill.png">Sólo letras minúsculas y sin acentos</p>
+
+            <div class="botones">
+                <button id="boton-encriptar" onclick="encriptar();">ENCRIPTAR</button>
+                <button id="boton-desencriptar" onclick="desencriptar();">DESENCRIPTAR</button>
+            </div>
+        </section>
+
+        <section class="area-dos">
+            <div>
+                <img id="personaje" src="images/Muñeco.png">
+                <h1 id="titulo">NINGUN MENSAJE FUE ENCONTRADO</h1>
+                <p id="texto">Escriba el mensaje que desee encriptar o desencriptar</p>
+            </div>
+            <textarea name="texto-mostrar" id="texto-mostrar" readonly></textarea>
+            <button id="boton-copiar" onclick="copiar();">COPIAR</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Ignacio Castro Planas - 2024</p>
+    </footer>
+</body>
+
+<script src="app.js"></script>
+
+</html>
